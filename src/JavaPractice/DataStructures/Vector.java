@@ -1,4 +1,4 @@
-package com.company.DataStructureImplementations;
+package JavaPractice.DataStructures;
 
 import org.junit.jupiter.api.Test;
 
@@ -52,6 +52,15 @@ public class Vector<ObjectType> {
             return null;
         }
         return (ObjectType) internalArray[index];
+    }
+
+    public boolean SetObject(int index, ObjectType object) {
+        if (index > currentSize || index < 0) {
+            return false;
+        }
+
+        internalArray[index] = object;
+        return true;
     }
 
     private void DoubleCapacity() {
@@ -132,5 +141,23 @@ public class Vector<ObjectType> {
 
         assumeTrue(allNumbersCorrect);
         assumeTrue(testVector.Length() == 200);
+    }
+
+    @Test
+    void TestReplacingObjectAtIndex() {
+        var testVector = new Vector<Integer>();
+
+        testVector.AddToBack(1);
+        testVector.AddToBack(2);
+
+        assumeTrue(testVector.GetObject(0) == 1);
+        assumeTrue(testVector.GetObject(1) == 2);
+        assumeTrue(testVector.Length() == 2);
+
+        testVector.SetObject(0, 3);
+
+        assumeTrue(testVector.GetObject(0) == 3);
+        assumeTrue(testVector.GetObject(1) == 2);
+        assumeTrue(testVector.Length() == 2);
     }
 }

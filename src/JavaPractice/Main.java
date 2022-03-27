@@ -1,4 +1,4 @@
-package com.company;
+package JavaPractice;
 
 public class Main {
 

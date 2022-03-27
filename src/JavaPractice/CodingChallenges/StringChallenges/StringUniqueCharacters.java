@@ -1,4 +1,4 @@
-package com.company.StringChallenges;
+package JavaPractice.CodingChallenges.StringChallenges;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +8,6 @@ import java.util.Arrays;
 
 
 public class StringUniqueCharacters {
-
 
     enum MethodType {
         DataStructuresAllowed,
@@ -35,14 +34,15 @@ public class StringUniqueCharacters {
 
     /**
      * Brute force attempt at telling whether the input string contains all unique characters
+     *
      * @param string The string to check if all characters in it are unique
      * @return true if all characters in the string only appear once in the string
-     *
+     * <p>
      * Time Complexity
      * Best Case 0(1) since it could return false on the first index
      * Worst Case O(n^2) where n is the length of the string because for every character, it loops over every other character
      * Average Case O(n^2)
-     *
+     * <p>
      * Space Complexity
      * O(n) where n is the number of characters in the input string
      */
@@ -60,16 +60,17 @@ public class StringUniqueCharacters {
     }
 
     /**
-     *  Attempt at telling whether the input string contains all unique characters by sorting the string first
+     * Attempt at telling whether the input string contains all unique characters by sorting the string first
+     *
      * @param string The string to check if all characters in it are unique
      * @return true if all characters in the string only appear once in the string
-     *
+     * <p>
      * Time Complexity
      * n = length of input string
      * Best Case 0(n log n) since Arrays.sort has a time complexity of O(n log n) and there is only one iteration through the string after that
      * Worst Case O(n log n) because Arrays.sort has a time complexity of O(n log n)
      * Average Case O(n log n)
-     *
+     * <p>
      * Space Complexity
      * Unknown because of Arrays.sort
      */
@@ -86,18 +87,19 @@ public class StringUniqueCharacters {
     }
 
     /**
-     *  Attempt at telling whether the input string contains all unique characters by using an extra data structure
+     * Attempt at telling whether the input string contains all unique characters by using an extra data structure
+     *
      * @param string The string to check if all characters in it are unique
      * @return true if all characters in the string only appear once in the string
-     *
+     * <p>
      * Time Complexity
      * n = length of input string
      * Best Case 0(1)
      * Worst Case O(n)
      * Average Case O(n)
-     *
+     * <p>
      * Space Complexity
-     * O(n) because the boolean array will always retain the same size regardless
+     * O(n) because the boolean array will always retain the same size regardless so input string is only space complexity
      */
 
     public static boolean AreAllCharactersUniqueDataStructuresAllowed(String string) {

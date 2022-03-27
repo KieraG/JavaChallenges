@@ -1,4 +1,4 @@
-package com.company.DataStructureImplementations;
+package JavaPractice.DataStructures;
 
 import org.junit.jupiter.api.Test;
 

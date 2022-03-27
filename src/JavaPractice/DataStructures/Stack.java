@@ -1,4 +1,4 @@
-package com.company.DataStructureImplementations;
+package JavaPractice.DataStructures;
 
 public class Stack<ObjectType> {
     private Deque<ObjectType> internalDeque = new Deque<>();
